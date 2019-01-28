@@ -8,6 +8,7 @@
 	<script src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script>
+
 		$(function(){
 			$.ajax({
 				type:"GET",
@@ -20,19 +21,22 @@
 			});
 		});
 		function show(data){
+			var Event_Image=null;
+			var Event_Date="";
+			var Event_Title="";
 			// alert(data.length);//顯示資料筆數
-			for(i=0; i<8;i++){
+
+			for(i=0; i<7;i++){
 
 			//將陣列用for寫成 就會逐筆顯示 若只想顯示n筆就寫 data[n] ex data[1]
 				// $("#msg").append(data[i].book_id+data[i].image_name+data[i].description+"<BR>");//原本用html會蓋掉 故用append就會顯示每筆資料
 				
 				// $("#msg").append('<img src="image/'+data[i].Event_Image+'" width="5%" alt="">')//顯示每筆圖片
-
-				// $("#msg").append('<ul data-role="listview"><li data-role="list-divider">近期活動</li> <li><a href="#event_content"><img src="image/'+data[i].Event_Image+'" width="5%" alt=""  ><h2>'+data[i].Event_Date+'</h2><p>'+data[i].Event_Title+'</p></a></li></ul>')
-			$("#list").append('<ul data-role="listview" data-inset="true" id="list"><li><a href="#event_content"><img src="image/'+data[i].Event_Image+'"><h2>'+data[i].Event_Date+'</h2><p>'+data[i].Event_Title+'</p></a></li></ul>');
-      		$( "#list" ).listview( "refresh" );  					
-
+				
+			$("#list").append('<li><a href="#https://tcnr1624.000webhostapp.com/event_content1.html"><img src="image/'+data[i].Event_Image+'"><h2>'+data[i].Event_Date+'</h2><p>'+data[i].Event_Title+'</p></a></li>');
+      		  	$( "#list" ).listview( "refresh" );					
 			}
+			
 		}
 	</script>
 </head>
@@ -42,7 +46,8 @@
 			<h1>Home</h1>
 		</div>
 		<div role="main" class="ui-content">
-			<div id="list"></div>
+			<!--不用迴圈 直接append進<ul> -->
+			<ul data-role="listview" data-inset="true" id="list"></ul>
 		</div>
 
 		      
