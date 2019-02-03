@@ -2,43 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>近期活動</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet"  href="css/jquery.mobile-1.4.5.min.css">
 	<script src="js/jquery-2.1.0.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script>
-
-		$(function(){
-			$.ajax({
-				type:"GET",
-				url:"https://tcnr1624.000webhostapp.com/select_db.php",
-				dataType:"json",//將收到資料轉成json
-				success:show,
-				error:function(){
-					alert("資料錯誤");
-				}
-			});
-		});
-		function show(data){
-			var Event_Image=null;
-			var Event_Date="";
-			var Event_Title="";
-			// alert(data.length);//顯示資料筆數
-
-			for(i=0; i<7;i++){
-
-			//將陣列用for寫成 就會逐筆顯示 若只想顯示n筆就寫 data[n] ex data[1]
-				// $("#msg").append(data[i].book_id+data[i].image_name+data[i].description+"<BR>");//原本用html會蓋掉 故用append就會顯示每筆資料
-				
-				// $("#msg").append('<img src="image/'+data[i].Event_Image+'" width="5%" alt="">')//顯示每筆圖片
-				
-			$("#list").append('<li><a href="#https://tcnr1624.000webhostapp.com/event_content1.html"><img src="image/'+data[i].Event_Image+'"><h2>'+data[i].Event_Date+'</h2><p>'+data[i].Event_Title+'</p></a></li>');
-      		  	$( "#list" ).listview( "refresh" );					
-			}
-			
-		}
-	</script>
+	<!-- 幻燈片js -->
+	<script type="text/javascript" src="js/ad.js"></script>
+	<!-- 此網頁之js -->
+	<script type="text/javascript" src="js/event.js"></script>
 </head>
 <body>
 	<div data-role="page" id="home" >
@@ -48,12 +20,156 @@
 		<div role="main" class="ui-content">
 			<!--不用迴圈 直接append進<ul> -->
 			<ul data-role="listview" data-inset="true" id="list"></ul>
-		</div>
-
-		      
+		</div>  
 		<div data-role="footer" data-position="fixed" data-theme="b">
-			<h4>Footer</h4>
 		</div>	
-	</div>	
+	</div>
+	<!-- page content1 -->	
+  	<div data-role="page" id="content1">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content1">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div>
+   <!-- page content2 -->
+  	<div data-role="page" id="content2">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content2">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div>
+   <!-- page content3 -->  
+    	<div data-role="page" id="content3">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content3">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div>
+   <!-- page content4 -->  
+    	<div data-role="page" id="content4">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content4">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div>
+     <!-- page content5 --> 
+    	<div data-role="page" id="content5">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content5">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div> 
+     <!-- page content6 --> 
+    	<div data-role="page" id="content6">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content6">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div> 
+     <!-- page content7 -->
+    	<div data-role="page" id="content7">
+    	<div data-role="header" data-theme="b">
+    		<a href="#home" data-icon="carat-l" data-role="button" 
+      		data-iconpos="notext" id="back">Back</a><!-- 返迴鈕 -->
+      		<h1>活動詳請</h1>
+    	</div>
+
+    	<div role="main" class="ui-content">
+	        <table width="100%">
+	        	<tr>
+	        		<td align="center" valign="center" >
+	        		</td>
+	        	</tr>	
+			</table>
+			<div id="content7">
+			</div>
+    	</div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    </div>
+  </div>      
 </body>
 </html>		

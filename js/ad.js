@@ -5,24 +5,39 @@ $(function(){
 	setInterval(ad,3000)  //每隔N秒換圖,直接呼叫function即可
 });
 var adindex=0; //目前的索引
-var adimg,adname,adlink;//取得目前的圖檔，對應的產品名稱
+var adimg1,adimg2;//取得目前的圖檔
 //圖片
-var adimgsrcary=new Array("slider1.jpg","slider2.jpg","slider3.jpg","slider4.jpg",
-	"slider5.jpg","slider6.jpg","slider7.jpg");
-//名稱
-var adnameary=new Array("HTC 10","HTC U11","HTC U12","HTC U11 eyes");
-var adlinkary=new Array("https://www.htc.com/tw/smartphones/htc-10/",
-	"https://www.htc.com/tw/smartphones/htc-u11/",
-	"https://www.htc.com/tw/smartphones/htc-u12-plus/",
-	"https://www.htc.com/tw/smartphones/htc-u11-eyes/");
+var adimgsrcary1=new Array("slider1_1.jpg","slider1_2.jpg","slider1_3.jpg","slider1_4.jpg",
+	"slider1_5.jpg");
+var adimgsrcary2=new Array("slider2_1.jpg","slider2_2.jpg","slider2_3.jpg","slider2_4.jpg",
+	"slider2_5.jpg");
+var adimgsrcary3=new Array("slider3_1.jpg","slider3_2.jpg","slider3_3.jpg","slider3_4.jpg",
+	"slider3_5.jpg");
+var adimgsrcary4=new Array("slider4_1.jpg","slider4_2.jpg","slider4_3.jpg","slider4_4.jpg",
+	"slider4_5.jpg");
+var adimgsrcary5=new Array("slider5_1.jpg","slider5_2.jpg","slider5_3.jpg","slider5_4.jpg",
+	"slider5_5.jpg");
+var adimgsrcary6=new Array("slider6_1.jpg","slider6_2.jpg","slider6_3.jpg","slider6_4.jpg",
+	"slider6_5.jpg");
+var adimgsrcary7=new Array("slider7_1.jpg","slider7_2.jpg","slider7_3.jpg","slider7_4.jpg",
+	"slider7_5.jpg");
+
 
 function ad(){//廣告
 	adindex++;
-	if(adindex>6){adindex=0}
-		adimg="image/"+adimgsrcary[adindex];//取得目前產品圖片
-		adname=adnameary[adindex] //取得目前產品文字
-		adlink=adlinkary[adindex]//取得超連結
-		$("#showimg").attr("src",adimg);//動態顯示圖片 attr取代裡面的變數 src換成setSrc
-		$("#showname").text(adname);//動態顯示文字
-		$("#showlink").attr("href",adlink);//超連結
+	if(adindex>4){adindex=0}
+		adimg1="image/"+adimgsrcary1[adindex];//取得目前產品圖片
+		$("#showimg1").attr("src",adimg1);//動態顯示圖片 attr取代裡面的變數 src換成setSrc
+		adimg2="image/"+adimgsrcary2[adindex];
+		$("#showimg2").attr("src",adimg2);
+		adimg3="image/"+adimgsrcary3[adindex];
+		$("#showimg3").attr("src",adimg3);
+		adimg4="image/"+adimgsrcary4[adindex];
+		$("#showimg4").attr("src",adimg4);
+		adimg5="image/"+adimgsrcary5[adindex];
+		$("#showimg5").attr("src",adimg5);
+		adimg6="image/"+adimgsrcary6[adindex];
+		$("#showimg6").attr("src",adimg6);
+		adimg7="image/"+adimgsrcary7[adindex];
+		$("#showimg7").attr("src",adimg7);														
 }
